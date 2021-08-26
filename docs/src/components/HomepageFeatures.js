@@ -1,43 +1,37 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+/* eslint-disable global-require */
+import React from "react"
+import clsx from "clsx"
+import styles from "./HomepageFeatures.module.css"
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: "简约风格设计",
+    Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
+    description: <>laboUI最初为医院检验科设计，风格简约。</>,
+  },
+  {
+    title: "语义化结构",
+    Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        基于Adobe的<code>react-aria</code>库，更加符合语义化。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: "使用 React 构建",
+    Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        自定义组件可以用来扩展或自定义原有 React 项目布局，基于<code>styled-component</code>库进行样式管理。
       </>
     ),
   },
-  {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
+]
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
@@ -46,7 +40,7 @@ function Feature({Svg, title, description}) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures() {
@@ -60,5 +54,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -3,20 +3,20 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "laboUI",
+  title: "LaboUI",
   tagline: "React 自定义组件库",
   url: "https://nyanyani.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
   organizationName: "nyanyani", // Usually your GitHub org/user name.
-  projectName: "laboUI", // Usually your repo name.
+  projectName: "LaboUI", // Usually your repo name.
+  i18n: { defaultLocale: "zh-hans", locales: ["zh-hans", "en"] },
   themeConfig: {
     navbar: {
-      title: "laboUI",
       logo: {
-        alt: "laboUI Logo",
+        alt: "LaboUI Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -24,12 +24,12 @@ module.exports = {
           type: "doc",
           docId: "intro",
           position: "left",
-          label: "Tutorial",
+          label: "文档",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "博客", position: "left" },
         {
-          href: "https://github.com/nyanyani/laboUI",
-          label: "GitHub",
+          href: "https://github.com/nyanyani/LaboUI",
+          label: "仓库",
           position: "right",
         },
       ],
@@ -50,7 +50,11 @@ module.exports = {
           title: "About",
           items: [
             {
-              label: "GitHub",
+              label: "Me",
+              href: "https://github.com/nyanyani",
+            },
+            {
+              label: "Resume",
               href: "https://github.com/nyanyani",
             },
           ],
@@ -64,17 +68,18 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/nyanyani/laboUI",
+              href: "https://github.com/nyanyani/LaboUI",
             },
           ],
         },
       ],
-      copyright: `MIT licensed | Copyright © ${new Date().getFullYear()} Nyanyani, Inc. Built with Docusaurus.`,
+      copyright: `MIT licensed | Copyright © ${new Date().getFullYear()} Nyanyani. Built with Docusaurus.`,
     },
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
+    hideableSidebar: true,
   },
   presets: [
     [
@@ -83,16 +88,25 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/",
+          editUrl: "https://github.com/nyanyani/LaboUI/edit/docs/website/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+          editUrl: "https://github.com/nyanyani/LaboUI/edit/docs/website/blog/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["zh", "en"],
       },
     ],
   ],
