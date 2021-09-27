@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+import { Checkbox, CheckGroup } from "."
+
+<Meta title="Components/Inputs/Checkbox" component={Checkbox} />
+
+Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
+
+## 基本选择框
+
+<Canvas>
+  <Story name="single-checkbox">
+    <Checkbox label="Checkbox" />
+  </Story>
+</Canvas>
+
+## 带标签的选择框
+
+<Canvas>
+  <Story name="single-checkbox">
+    <Checkbox label="Checkbox" />
+  </Story>
+</Canvas>
+
+## 选择框组
+
+<Canvas>
+  <Story name="checkbox-group">
+    <CheckboxGroup label="Checkbox">
+      <Checkbox label="Checkbox" />
+      <Checkbox label="Checkbox2" />
+      <Checkbox label="Checkbox3" isSelected />
+    </CheckboxGroup>
+  </Story>
+</Canvas>

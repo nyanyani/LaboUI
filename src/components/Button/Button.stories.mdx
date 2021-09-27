@@ -1,0 +1,108 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+import { useState } from "react"
+import { Button, ButtonGroup } from "."
+import { Icon, arrowPreset } from "../Icon"
+
+<Meta title="Components/Inputs/Button" component={[Button, Icon]} />
+
+# Button
+
+export const Template = (args) => {
+  console.log(Icon)
+  return <Button {...args} />
+}
+
+## 实心按钮(主要按钮) | 描边按钮(次要按钮)
+
+<Canvas>
+  <Story name="primary">
+    <Button primary label="primary" handlePress={() => console.log(React.isWDYR)} />
+    <Button label="secondary" />
+  </Story>
+</Canvas>
+
+## 按钮类型
+
+按钮: "button" | "submit" | "reset"
+锚点: "a"
+其他 input 类型
+
+<Canvas>
+  <Story name="button-type" style={`display: inline-flex;`}>
+    <Button primary label="submit" type="submit" />
+    <Button label="anchor" href="#" />
+  </Story>
+</Canvas>
+
+## 禁用状态
+
+<Canvas>
+  <Story name="disabled-button">
+    <Button primary disabled label="primary" />
+    <Button disabled label="secondary" />
+  </Story>
+</Canvas>
+
+## 按钮大小
+
+<Canvas>
+  <Story name="button-size">
+    <Button label="small" size="sm" />
+    <Button label="medium" size="md" />
+    <Button label="large" size="lg" />
+  </Story>
+</Canvas>
+
+## 按钮图标
+
+import camIcon from "@/assets/icons/cam.svg"
+
+<Canvas>
+  <Story name="icon-button">
+    <Button size="sm">
+      <Icon iconSrc={camIcon.url} label="Cam" {...arrowPreset({ direction: "down" })} />
+    </Button>
+    <Button primary size="sm">
+      <Icon iconSrc={camIcon.url} label="Cam" />
+    </Button>
+  </Story>
+</Canvas>
+
+## 触发事件
+
+使用 handlePress 属性
+
+import historyIcon from "@/assets/icons/history.svg"
+
+export const PressExp = () => {
+  const [count, setCount] = useState(0)
+  const handlePress = () => setCount((prevCount) => prevCount + 1)
+  return (
+    <Button handlePress={handlePress} size="md" primary>
+      <Icon iconSrc={historyIcon.url} size="sm" label={count} />
+    </Button>
+  )
+}
+
+<Canvas>
+  <Story name="press-event">
+    <PressExp />
+    <Button loading primary />
+  </Story>
+</Canvas>
+
+## 按钮组
+
+import arrowIcon from "@/assets/icons/arrow.svg"
+
+<Canvas>
+  <Story name="button-group">
+    <ButtonGroup>
+      <Button primary />
+      <Button>
+        <Icon iconSrc={arrowIcon.url} label="菜单" {...arrowPreset({ direction: "down" })} size="sm" />
+      </Button>
+      <Button primary />
+    </ButtonGroup>
+  </Story>
+</Canvas>

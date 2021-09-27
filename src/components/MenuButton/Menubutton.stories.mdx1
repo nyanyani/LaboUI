@@ -1,0 +1,13 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+
+import { MenuButton } from "."
+
+<Meta title="Components/Inputs/MenuButton" component={MenuButton} />
+
+## 菜单按钮
+
+<Canvas>
+  <Story name="menu">
+    <MenuButton options={{ direction: "down", size: "sm" }} />
+  </Story>
+</Canvas>

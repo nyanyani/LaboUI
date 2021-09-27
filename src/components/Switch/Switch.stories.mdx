@@ -1,0 +1,58 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs"
+import { useState, useCallback } from "react"
+import { Switch } from "."
+
+<Meta title="Components/Inputs/Switch" component={Switch} />
+
+## Switch 开关组件
+
+开关控制能切换单个设置的开/关两个状态。
+
+### 基本的开关
+
+<Canvas>
+  <Story name="Switch-basic">
+    <Switch />
+    <Switch defaultSelected />
+    <Switch isDisabled />
+    <Switch defaultSelected isReadonly />
+  </Story>
+</Canvas>
+
+### 标签
+
+<Canvas>
+  <Story name="Switch-Uncontrolled">
+    <Switch label="Label" />
+    <Switch label="Label-Checked" defaultSelected />
+    <Switch label="Disabled" isDisabled />
+    <Switch label="Readonly" isReadonly />
+    <Switch label="Readonly-Checked" defaultSelected isReadonly />
+  </Story>
+</Canvas>
+
+### 尺寸
+
+<Canvas>
+  <Story name="Switch-Size">
+    <Switch label="small" size="small" />
+    <Switch label="medium" size="medium" />
+    <Switch label="large" size="large" />
+  </Story>
+</Canvas>
+
+### 受控组件
+
+export const ControlledSwitch = () => {
+  const [selected, setSelected] = useState(false)
+  const handleChange = useCallback((currSelected) => {
+    setSelected(currSelected)
+  }, [])
+  return <Switch label="controlled" isSelected={selected} onChange={handleChange} />
+}
+
+<Canvas>
+  <Story name="Switch-controlled">
+    <ControlledSwitch />
+  </Story>
+</Canvas>

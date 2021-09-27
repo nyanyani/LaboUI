@@ -1,0 +1,102 @@
+@define-mixin priority $foreground, $background, $border: currentColor {
+  color: $foreground;
+  background-color: $background;
+
+  &:hover:not(:disabled) {
+    color: $background;
+    background-color: $foreground;
+    border-color: $border;
+  }
+}
+
+@define-mixin size $type, $fontSize, $padding: 8px, $height: 16px {
+  &--$(type) {
+    font-size: $fontSize;
+    padding: 0 $padding;
+    height: $height;
+  }
+}
+
+:root {
+  --base-color: #1ea7fd;
+  --base-btn-ratio: 1.2;
+  --base-btn-xs: 1rem;
+}
+
+.btn {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 32px;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--base-color);
+  border-radius: 0.5em;
+  background: none;
+  outline: none;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &--primary {
+    @mixin priority white, var(--base-color);
+  }
+
+  &--secondary {
+    @mixin priority var(--base-color), white, var(--base-color);
+  }
+
+  &--center {
+    line-height: 0;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:not(:disabled) {
+    &:active {
+      background: hsla(0, 0%, 50%, 0.5);
+      color: #fff;
+      border-color: transparent;
+      transition-duration: 0.1s;
+    }
+  }
+
+  &__group {
+    display: inline-flex;
+  }
+
+  &__group &:not(:first-of-type):not(:last-of-type) {
+    border-radius: 0;
+  }
+
+  &__group &:first-of-type:not(:last-of-type) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+  }
+
+  &__group &:last-of-type:not(:first-of-type) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+  }
+
+  @mixin size xs, 10px, 8px, 18px;
+  @mixin size sm, 12px, 10px, 24px;
+  @mixin size md, 14px, 12px, 32px;
+  @mixin size lg, 16px, 14px, 40px;
+}

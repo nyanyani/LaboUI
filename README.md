@@ -11,3 +11,6 @@ A customized React components library.
 [LaboUI](https://nyanyani.github.io/docs)
 
 ## Components
+
+1. Inputs Components: Button, Checkbox, Radio, Switch ...
+2. Layout Components: ...

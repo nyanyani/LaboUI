@@ -1,0 +1,5 @@
+.checkbox-group {
+  &__label {
+    display: block;
+  }
+}

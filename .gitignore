@@ -119,3 +119,6 @@ dist
 
 # Local history
 .history/
+
+# Storybook cache
+storybook-static/

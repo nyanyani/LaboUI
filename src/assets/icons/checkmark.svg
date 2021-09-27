@@ -1,0 +1,5 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="20" height="20" rx="5" fill="var(--checkmark-color, #E4E4E4)" />
+<rect x="2" y="2" width="16" height="16" rx="3" fill="white" fill-opacity="var(--checkmark-mask-opacity, 1)" />
+<path d="M15 5L9.58261 12.7391C8.85999 13.7714 8.49868 14.2876 7.98846 14.296C7.47825 14.3043 7.10021 13.8003 6.34415 12.7922L5 11" stroke="var(--checkmark-symbol-color, transparent)" stroke-width="3" stroke-linecap="round" />
+</svg>

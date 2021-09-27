@@ -1,0 +1,15 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs"
+import { Icon } from "."
+import cam from "@/assets/icons/cam.svg"
+import checkmark from "@/assets/icons/checkmark.svg"
+
+<Meta title="Components/Content/Icon" component={Icon} />
+
+## 图标
+
+<Canvas>
+  <Story name="Icon">
+    <Icon iconSrc={cam.url} label="cam" size="md" />
+    <Icon iconSrc={checkmark.url} label="Checkmark" size="sm" />
+  </Story>
+</Canvas>

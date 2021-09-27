@@ -1,0 +1,103 @@
+.switch {
+  --switch-height: 18px;
+  --switch-width: 36px;
+  --switch-background: #fff;
+  --slider-background: transparent;
+
+  display: inline-flex;
+  place-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &--sm {
+    --switch-height: 14px;
+    --switch-width: 28px;
+  }
+
+  &--lg {
+    --switch-height: 22px;
+    --switch-width: 44px;
+  }
+
+  &--disabled {
+    --switch-background: #808080;
+
+    opacity: 0.5;
+    color: #808080;
+    cursor: not-allowed;
+  }
+
+  &--readonly {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  &__box {
+    position: relative;
+    width: var(--switch-width, 40px);
+    height: var(--switch-height, 20px);
+    border-radius: 100px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    background: var(--switch-background);
+    overflow: hidden;
+
+    &--checked {
+      --slider-background: var(--base-color);
+
+      border-color: var(--base-color);
+    }
+  }
+
+  &__slider {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      height: var(--switch-height);
+      left: 0;
+      right: 100%;
+      background: var(--slider-background, #fff);
+      border-radius: var(--switch-height);
+      opacity: 0;
+      transition: 0.4s 0.1s all;
+    }
+
+    &::after {
+      width: calc(var(--switch-height) - 8px);
+      height: calc(var(--switch-height) - 4px);
+      padding: 0 2px;
+      background: #fff;
+      box-shadow: 0 0 3px 0 grey;
+      border-radius: var(--switch-height);
+      top: 0;
+      bottom: 0;
+      left: 2px;
+      margin: auto 0;
+      transition: left 0.4s, width 0.3s 0.2s, padding 0.3s;
+    }
+
+    &--checked {
+      &::before {
+        right: 0;
+        opacity: 1;
+        transition: 0.4s -0.1s all;
+      }
+
+      &::after {
+        width: calc(var(--switch-height) - 4px);
+        left: calc(var(--switch-width) - var(--switch-height) + 2px);
+        padding: 0;
+        transition: left 0.4s, width 0.3s, padding 0.3s 0.2s;
+      }
+    }
+  }
+
+  &__label {
+    text-align: start;
+    white-space: nowrap;
+  }
+}

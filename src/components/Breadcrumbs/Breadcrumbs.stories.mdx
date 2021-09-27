@@ -1,0 +1,19 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs"
+import { Breadcrumbs, span } from "."
+
+<Meta title="Components/Navigation/Breadcrumbs" component={Breadcrumbs} />
+
+## 面包屑导航
+
+export const Template = () => <Breadcrumbs />
+
+<Canvas>
+  <Story name="Breadcrumbs">
+    <Breadcrumbs>
+      <span>LaboUI</span>
+      <span>Components</span>
+      <span>Navigation</span>
+      <span>Breadcrumb</span>
+    </Breadcrumbs>
+  </Story>
+</Canvas>

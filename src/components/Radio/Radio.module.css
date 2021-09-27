@@ -1,0 +1,31 @@
+.radio {
+  --radiomark-color: #858585;
+
+  &__box {
+    cursor: pointer;
+
+    &:hover {
+      --radiomark-color: #595959;
+    }
+
+    &--checked {
+      --radiomark-color: var(--base-color);
+      --radiomark-symbol-color: var(--radiomark-color);
+      --radiomark-symbol-scale: 0.5;
+
+      &:hover {
+        --radiomark-color: var(--base-color-darken);
+      }
+    }
+  }
+
+  &__svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__label {
+    text-align: start;
+    user-select: none;
+  }
+}

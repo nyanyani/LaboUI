@@ -1,0 +1,29 @@
+.breadcrumb {
+  &__nav {
+    padding: 5px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-flex;
+    gap: 5px;
+
+    &Link {
+      text-decoration: none;
+    }
+  }
+
+  &__separator {
+    transform: scale(1);
+
+    &--reverse {
+      transform: scale(-1);
+    }
+  }
+}

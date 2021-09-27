@@ -1,0 +1,43 @@
+:root {
+  --base-color-darken: #3e97d0;
+}
+
+.checkbox {
+  display: inline-flex;
+  place-items: center;
+  position: relative;
+  margin: 0;
+  outline: none;
+
+  --checkmark-color: #858585;
+  --checkmark-fill: transparent;
+
+  &__box {
+    cursor: pointer;
+
+    &:hover {
+      --checkmark-color: #595959;
+    }
+
+    &--checked {
+      --checkmark-color: var(--base-color);
+      --checkmark-fill: var(--checkmark-color);
+      --checkmark-symbol-color: #fff;
+      --checkmark-mask-opacity: 0;
+
+      &:hover {
+        --checkmark-color: var(--base-color-darken);
+      }
+    }
+  }
+
+  &__svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__label {
+    text-align: start;
+    user-select: none;
+  }
+}

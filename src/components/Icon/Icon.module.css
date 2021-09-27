@@ -1,0 +1,76 @@
+@define-mixin size $type, $width, $height, $ratio: 1 {
+  &--$(type) {
+    svg {
+      width: $width;
+      height: $height;
+    }
+  }
+}
+
+.icon {
+  display: inline-flex;
+  place-items: center;
+  gap: 5px;
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    color: currentColor;
+  }
+
+  &__label {
+    text-align: start;
+  }
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  &__spinner--loading {
+    animation: spinner 2s infinite ease-in-out;
+    transform-origin: center;
+  }
+
+  &__arrow {
+    &--down {
+      transform: rotate(-90deg);
+    }
+
+    &--up {
+      transform: rotate(90deg);
+    }
+
+    &--right {
+      transform: rotate(180deg);
+    }
+
+    &--reverse {
+      transform: scale(-1);
+    }
+  }
+
+  &--color--grey {
+    color: grey;
+    opacity: 0.6;
+  }
+
+  @mixin size xs, 0.5em, 0.5em;
+  @mixin size sm, 1em, 1em;
+  @mixin size md, 1.5em, 1.5em;
+  @mixin size lg, 2em, 2em;
+  @mixin size xl, 3em, 3em;
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(720deg);
+    }
+
+    100% {
+      transform: rotate(1080deg);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+import { useState } from "react"
+import { Meta, Canvas, Story } from "@storybook/addon-docs"
+import { Radio } from "../Radio"
+import { RadioGroup } from "."
+
+<Meta title="Components/Inputs/RadioGroup" component={RadioGroup} />
+
+## 单选框组
+
+### 非受控单选框组
+
+<Canvas>
+  <Story name="RadioGroup-uncontrolled">
+    <RadioGroup defaultValue="A">
+      <Radio value="A" label="A" />
+      <Radio value="B" label="B" />
+      <Radio value="C" label="C" />
+    </RadioGroup>
+  </Story>
+</Canvas>
+
+### 受控单选框组
+
+<Canvas>
+  <Story name="RadioGroup-controlled">
+    {() => {
+      const [value, setValue] = useState("A")
+      return (
+        <RadioGroup value={value} onChange={setValue}>
+          <Radio value="A" label="A" />
+          <Radio value="B" label="B" />
+          <Radio value="C" label="C" />
+        </RadioGroup>
+      )
+    }}
+  </Story>
+</Canvas>
