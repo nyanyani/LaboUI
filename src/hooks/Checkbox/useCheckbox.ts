@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import { useCheckboxGroupContext } from "@/components/CheckboxGroup/context"
-import { UseToggleStateProps, useToggleState } from ".."
-import { useToggle } from "../shared/toggle"
+import { UseToggleStateProps, useToggleState } from "../shared/state"
+import { useToggle } from "@/hooks/shared/toggle"
 
 export interface UseCheckboxProps extends UseToggleStateProps {
   isDisabled?: boolean

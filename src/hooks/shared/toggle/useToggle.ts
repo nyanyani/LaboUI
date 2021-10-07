@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from "react"
-import { ToggleState, UseToggleStateProps } from "@/hooks"
-import { usePress } from "../interactions/usePress"
+import { ToggleState, UseToggleStateProps } from "@/hooks/shared/state"
+import { usePress } from "@/hooks/shared/interactions/usePress"
 
 export interface UseToggle {
   inputProps: React.InputHTMLAttributes<HTMLInputElement>
