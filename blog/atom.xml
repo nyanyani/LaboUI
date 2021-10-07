@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nyanyani.github.io/blog</id>
+    <title>LaboUI Blog</title>
+    <updated>2021-06-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://nyanyani.github.io/blog"/>
+    <subtitle>LaboUI Blog</subtitle>
+    <icon>https://nyanyani.github.io/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Hola! 欢迎！]]></title>
+        <id>hello-world</id>
+        <link href="https://nyanyani.github.io/blog/hello-world"/>
+        <updated>2021-06-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[欢迎使用 LaboUI :DD，这是我的第一个开源项目，have fun!]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[这个库是干什么的？]]></title>
+        <id>intro</id>
+        <link href="https://nyanyani.github.io/blog/intro"/>
+        <updated>2021-06-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[简单来说就是用 React 造的轮子，仅作为学习交流使用，请勿用在实际生产环境（如果有人愿意使用的话请告诉我 xD）。]]></summary>
+    </entry>
+</feed>
