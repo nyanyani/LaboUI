@@ -36,3 +36,7 @@
 .menu::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.navbar__search-input {
+  outline: none;
+}

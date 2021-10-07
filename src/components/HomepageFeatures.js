@@ -10,20 +10,16 @@ const FeatureList = [
     description: <>laboUI最初为医院检验科设计，风格简约。</>,
   },
   {
-    title: "语义化结构",
+    title: "基于 Typescript 开发",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        基于Adobe的<code>react-aria</code>库，更加符合语义化。
-      </>
-    ),
+    description: <> 静态类型检查，更好的IntelliSense提示。</>,
   },
   {
     title: "使用 React 构建",
     Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        自定义组件可以用来扩展或自定义原有 React 项目布局，基于<code>styled-component</code>库进行样式管理。
+        自定义组件可以用来扩展或自定义原有 React 项目布局，使用<code>PostCSS</code>进行样式管理。
       </>
     ),
   },

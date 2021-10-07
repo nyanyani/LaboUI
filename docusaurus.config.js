@@ -6,13 +6,14 @@ module.exports = {
   title: "LaboUI",
   tagline: "React 自定义组件库",
   url: "https://nyanyani.github.io",
-  baseUrl: "/",
+  trailingSlash: true,
+  baseUrl: "/LaboUI/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.svg",
   organizationName: "nyanyani", // Usually your GitHub org/user name.
   projectName: "LaboUI", // Usually your repo name.
-  i18n: { defaultLocale: "zh-hans", locales: ["zh-hans", "en"] },
+  i18n: { defaultLocale: "zh-CN", locales: ["zh-CN", "en"] },
   themeConfig: {
     navbar: {
       logo: {
@@ -106,6 +107,7 @@ module.exports = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         hashed: true,
+        indexPages: true,
         language: ["zh", "en"],
       },
     ],
