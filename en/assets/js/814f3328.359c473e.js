@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hola! \u6b22\u8fce\uff01","permalink":"/en/blog/hello-world"},{"title":"\u8fd9\u4e2a\u5e93\u662f\u5e72\u4ec0\u4e48\u7684\uff1f","permalink":"/en/blog/intro"}]}')}}]);

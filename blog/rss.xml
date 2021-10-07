@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>LaboUI Blog</title>
-        <link>https://nyanyani.github.io/blog</link>
+        <link>https://nyanyani.github.io/LaboUI/blog</link>
         <description>LaboUI Blog</description>
         <lastBuildDate>Fri, 25 Jun 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Hola! 欢迎！]]></title>
-            <link>https://nyanyani.github.io/blog/hello-world</link>
+            <link>https://nyanyani.github.io/LaboUI/blog/hello-world</link>
             <guid>hello-world</guid>
             <pubDate>Fri, 25 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[欢迎使用 LaboUI :DD，这是我的第一个开源项目，have fun!]]></description>
         </item>
         <item>
             <title><![CDATA[这个库是干什么的？]]></title>
-            <link>https://nyanyani.github.io/blog/intro</link>
+            <link>https://nyanyani.github.io/LaboUI/blog/intro</link>
             <guid>intro</guid>
             <pubDate>Sat, 05 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[简单来说就是用 React 造的轮子，仅作为学习交流使用，请勿用在实际生产环境（如果有人愿意使用的话请告诉我 xD）。]]></description>
